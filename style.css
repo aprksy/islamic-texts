@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8f8f8;
+}
+
+.header {
+    display: flex;
+    flex-flow: row;
+    height: 60px;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.header .name {
+    margin: 20px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.position {
+    margin: 20px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    flex-flow: row;
+    height: calc(100vh - 61px);
+}
+
+.leftbar {
+    display: flex;
+    flex-flow: column;
+    width: 350px;
+    /* background-color: #eee; */
+    border-right: 1px solid #eee;
+}
+
+.main-content {
+    display: flex;
+    flex-flow: row;
+    width: calc(100% - 351px);
+}
+
+.rightbar {
+    display: flex;
+    flex-flow: column;
+    width: 450px;
+    /* background-color: #ccc; */
+    border-left: 1px solid #eee;
+}
+
+.middle-rail {
+    display: flex;
+    flex-flow: column;
+    padding: 0 150px;
+    width: calc(100% - 750px);
+    overflow-y: auto;
+}
+
+.bio {
+    width: 310px;
+    height: 260px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: #eee;
+    background-image: url("images/profile-pic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #eee;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.biodata {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.biodata .name {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contact::before {
+    font-weight: bold;
+    color: navy;
+    content: "CONTACTS";
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.contact {
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-item {
+    padding: 7px 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #666;
+}
+
+.social::before {
+    font-weight: bold;
+    color: navy;
+    content: "SOCIAL LINKS";
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.social {
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid #eee;
+}
+
+.social-item {
+    padding: 7px 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #666;
+}
+
+a {
+    color: navy;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    /* letter-spacing: 1px; */
+}
+
+.rail-content {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+}
+
+.rail-content-item-container {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;    
+}
+
+.rail-content-item-2cols {
+    display: flex;
+    flex-flow: row;
+}
+
+.rail-content-item {
+    display: flex;
+    flex-flow: column;
+}
+
+.rail-content-item-separator {
+    width: 0;
+    margin: 0 20px;
+    border-left: 1px solid #eee;
+}
+
+.rail-content-item .head {
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.rail-content-item .body-big-font {
+    font-size: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.rail-content-item .body {
+    font-size: 16px;
+    color: #666;
+}
+
+.experience {
+    padding: 20px 0;
+    display: flex;
+    flex-flow: row;
+    font-size: 16px;
+}
+
+.experience .time-range {
+    width: 250px;
+    font-size: 18px;
+    color: navy;
+}
+
+.experience .time-range-boundaries {
+    font-size: 18px;
+    color: navy;
+}
+
+.experience .time-range-duration {
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+}
+
+.experience .experience-item {
+    width: calc(100% - 250px);
+    display: flex;
+    flex-flow: column;
+    font-size: 16px;
+}
+
+.experience-item .company {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.experience-item .record {
+    display: flex;
+    flex-flow: row;
+    padding-bottom: 6px;
+}
+
+.experience-item .key {
+    width: 120px;
+    font-size: 18px;
+    font-style: italic;
+    margin-right: 20px;
+}
+
+.experience-item .value {
+    font-size: 18px;
+}
