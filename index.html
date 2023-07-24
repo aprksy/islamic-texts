@@ -1,20 +1,28 @@
 <html>
     <head>
         <title>aprksy's resume</title>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <script>
-            if (window.screen.availWidth < 1600) {
+            var showRightPanel = true;
+            if (window.screen.availWidth < 1200) {
                 window.location.href = "smallscreen.html";
+            } else if (window.screen.availWidth < 1643) {
+                showRightPanel = false;
+            }
+
+            if (!showRightPanel) {
+                document.getElementById("rightPanel").style.display = "none";
             }
         </script>
     </head>
-    <body>
+    <body onscroll="console.log('scroll')">
         <div class="header">
             <div>
                 <div class="name">aprksy resume (updated.2023-07-22)</div>
             </div>
             <div>
-                <div class="position">Solution Architect</div>
+                <div class="position"><i data-feather="star"></i></div>
             </div>
         </div>
         <div class="content">
@@ -22,7 +30,9 @@
                 <div class="bio">
                     <div class="photo"></div>   
                     <div class="biodata">
-                        <span class="name">Agung Prakasya</span> (He/Him)
+                        <span class="name">Agung Prakasya</span>
+                        <br>
+                        (He/Him)
                         <br>
                         May 20, 1975
                         <br>
@@ -31,69 +41,57 @@
                 </div>
                 <div class="contact">
                     <div class="contact-item">
-                        <div>Email</div>
+                        <div><i data-feather="mail"></i></div>
                         <div><a href="mailto:aprksy@gmail.com">aprksy@gmail.com</a></div>
                     </div>
                     <div class="contact-item">
-                        <div>Phone</div>
+                        <div><i data-feather="phone"></i></div>
                         <div>+62 81975-19750</div>
                     </div>
                     <div class="contact-item">
-                        <div>Whatsapp</div>
+                        <div><i data-feather="message-circle"></i></div>
                         <div><a href="https://wa.me/6281975519750" target=”_blank>+62 81975-19750</a></div>
                     </div>
                     <div class="contact-item">
-                        <div>Telegram</div>
+                        <div><i data-feather="send"></i></div>
                         <div><a href="https://t.me/aprksy" target=”_blank>aprksy</a></div>
                     </div>
                     <div class="contact-item">
-                        <div>Location</div>
-                        <div>Jakarta/Indonesia (UTC+7:00)</div>
+                        <div><i data-feather="map-pin"></i></div>
+                        <div style="text-align: right;">Jakarta (UTC+7:00)<br>Indonesia</div>
                     </div>
                 </div>
                 <div class="social">
                     <div class="social-item">
-                        <div>Website</div>
+                        <div><i data-feather="home"></i></div>
                         <div><a href="https://www.aprksy.xyz" target=”_blank>www.aprksy.xyz</a></div>
                     </div>
                     <div class="social-item">
-                        <div>Blog</div>
+                        <div><i data-feather="layout"></i></div>
                         <div><a href="https://blog.aprksy.xyz" target=”_blank>blog.aprksy.xyz</a></div>
                     </div>
                     <div class="social-item">
-                        <div>LinkedIn</div>
+                        <div><i data-feather="linkedin"></i></div>
                         <div><a href="https://linkedin.com/in/agungprakasya" target=”_blank>agungprakasya</a></div>
                     </div>
                     <div class="social-item">
-                        <div>Github</div>
+                        <div><i data-feather="github"></i></div>
                         <div><a href="https://github.com/aprksy" target=”_blank>github.com/aprksy</a></div>
                     </div>
                     <div class="social-item">
-                        <div>Twitter</div>
+                        <div><i data-feather="twitter"></i></div>
                         <div><a href="https://twitter.com/aprksy" target=”_blank>@aprksy</a></div>
                     </div>
                 </div>
             </div>
             <div class="main-content">
-                <div class="middle-rail">
-                    <div class="rail-content">
-                        <div class="rail-content-item-container">
-                            <div class="rail-content-item">
-                                <div class="head">SUMMARY</div>
-                                <div class="body-big-font">
-                                    When the client runs queries to retrieve records, the Parsing engine sends a request to BYNET. 
-                                    BYNET sends the retrieval request to appropriate AMPs. 
-                                    Then AMPs search their disks in parallel and identify the required records and sends to BYNET. 
-                                    BYNET then sends the records to Parsing Engine which in turn will send to the client. 
-                                    Following is the retrieval architecture of Teradata.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rail-content-item-container">
-                            <div class="rail-content-item-2cols">
+                <div class="rail-container">
+                    <div id="middle-rail" class="middle-rail">
+                        <div class="rail-content">
+                            <div class="rail-content-item-container">
                                 <div class="rail-content-item">
-                                    <div class="head">QUALIFICATION</div>
-                                    <div class="body">
+                                    <div class="head">SUMMARY</div>
+                                    <div class="body-big-font">
                                         When the client runs queries to retrieve records, the Parsing engine sends a request to BYNET. 
                                         BYNET sends the retrieval request to appropriate AMPs. 
                                         Then AMPs search their disks in parallel and identify the required records and sends to BYNET. 
@@ -101,62 +99,246 @@
                                         Following is the retrieval architecture of Teradata.
                                     </div>
                                 </div>
-                                <div class="rail-content-item-separator"></div>
+                            </div>
+                            <div class="rail-content-item-container">
                                 <div class="rail-content-item">
                                     <div class="head">EDUCATION</div>
                                     <div class="body">
-                                        When the client runs queries to retrieve records, the Parsing engine sends a request to BYNET. 
-                                        BYNET sends the retrieval request to appropriate AMPs. 
-                                        Then AMPs search their disks in parallel and identify the required records and sends to BYNET. 
-                                        BYNET then sends the records to Parsing Engine which in turn will send to the client. 
-                                        Following is the retrieval architecture of Teradata.
+                                        Graduated in Mathematics, <a href="https://itb.ac.id" target="_blank">Bandung Institute of Technology</a>, 2000</a>. 
+                                        GPA 2.66 of 4.00.
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rail-content-item-container">
-                            <div class="rail-content-item">
-                                <div class="head">PERSONAL RESEARCH</div>
-                                <div class="body">
-                                    When the client runs queries to retrieve records, the Parsing engine sends a request to BYNET. BYNET sends the retrieval request to appropriate AMPs. Then AMPs search their disks in parallel and identify the required records and sends to BYNET. BYNET then sends the records to Parsing Engine which in turn will send to the client. Following is the retrieval architecture of Teradata.
+                            <div class="rail-content-item-container">
+                                <div class="rail-content-item-2cols">
+                                    <div class="rail-content-item">
+                                        <div class="head">QUALIFICATION</div>
+                                        <div class="body">
+                                            When the client runs queries to retrieve records, the Parsing engine sends a request to BYNET. 
+                                            BYNET sends the retrieval request to appropriate AMPs. 
+                                            Then AMPs search their disks in parallel and identify the required records and sends to BYNET. 
+                                            BYNET then sends the records to Parsing Engine which in turn will send to the client. 
+                                            Following is the retrieval architecture of Teradata.
+                                        </div>
+                                    </div>
+                                    <div class="rail-content-item-separator"></div>
+                                    <div class="rail-content-item">
+                                        <div class="head">PERSONAL RESEARCH</div>
+                                        <div class="body">
+                                            When the client runs queries to retrieve records, the Parsing engine sends a request to BYNET. 
+                                            BYNET sends the retrieval request to appropriate AMPs. 
+                                            Then AMPs search their disks in parallel and identify the required records and sends to BYNET. 
+                                            BYNET then sends the records to Parsing Engine which in turn will send to the client. 
+                                            Following is the retrieval architecture of Teradata.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rail-content-item-container">
-                            <div class="rail-content-item">
-                                <div class="head">PROFESSIONAL EXPERIENCE</div>
-                                <div class="body">
-                                    <!-- <div>When the client runs queries to retrieve records, the Parsing engine sends a request to BYNET. BYNET sends the retrieval request to appropriate AMPs. Then AMPs search their disks in parallel and identify the required records and sends to BYNET. BYNET then sends the records to Parsing Engine which in turn will send to the client. Following is the retrieval architecture of Teradata.</div> -->
-                                    <div class="experience">
-                                        <div class="time-range">
-                                            <div class="time-range-boundaries">Jun 2022 - Present</div>
-                                            <div class="time-range-duration">1 year, 1 month</div>
+                            <div class="rail-content-item-container no-border">
+                                <div class="rail-content-item">
+                                    <div class="head">PROFESSIONAL EXPERIENCE</div>
+                                    <div class="body">
+                                        <!-- <div>When the client runs queries to retrieve records, the Parsing engine sends a request to BYNET. BYNET sends the retrieval request to appropriate AMPs. Then AMPs search their disks in parallel and identify the required records and sends to BYNET. BYNET then sends the records to Parsing Engine which in turn will send to the client. Following is the retrieval architecture of Teradata.</div> -->
+                                        <div class="experience">
+                                            <div class="time-range">
+                                                <div class="time-range-boundaries">Jun 2022 - Present</div>
+                                                <div class="time-range-duration">1 year, 1 month</div>
+                                            </div>
+                                            <div class="experience-item">
+                                                <div class="company">
+                                                    <!-- <div class="name">Quipper</div> -->
+                                                    <a class="url" href="https://quipper.com" target="_blank">Quipper</a>
+                                                    <div class="rightend">
+                                                        <div class="exp-position">Solution Architect</div>
+                                                        <div class="detailbtn">
+                                                            <i class="toggleicon icon-active" data-feather="chevron-down"></i>
+                                                            <i class="toggleicon" data-feather="x"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details-container">
+                                                    <div class="details">
+                                                        <div class="record">
+                                                            <div class="key">Position</div>
+                                                            <div class="value">Solution Architect</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Report to</div>
+                                                            <div class="value">Lead Solution Architect</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Team</div>
+                                                            <div class="value">n/a</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Responsibility</div>
+                                                            <ul class="value">
+                                                                <li>Conduct solution and architecture design and review for pre-development process.</li>
+                                                                <li>Assess and analyze current system for potential improvements.</li>
+                                                                <li>Conduct PoCs for technical initiatives.</li>
+                                                                <li>Conduct initial development process before handed over to development team.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Tech. Stack</div>
+                                                            <div class="value">Go, Vanilla Js, MongoDB, Docker, Kubernetes, AWS, Github Action</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Std. & Specs.</div>
+                                                            <div class="value">OpenID, JWT, LTI 1.3</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Accomplishment</div>
+                                                            <ul class="value">
+                                                                <li>Designed and developed a LTI 1.3 Core specification implementation in Golang from the ground up.</li>
+                                                                <li>Designed an integration model for a new service with minimal impact on the existing system.</li>
+                                                                <li>Conducted knowledge sharing sessions and documentation on best practices and lessons learned in implementing standards and specifications</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="experience-item">
-                                            <div class="company">Quipper</div>
-                                            <div class="record">
-                                                <div class="key">Position</div>
-                                                <div class="value">Solution Architect</div>
+                                        <div class="experience">
+                                            <div class="time-range">
+                                                <div class="time-range-boundaries">Feb 2021 - Jun 2022</div>
+                                                <div class="time-range-duration">1 year, 5 month</div>
                                             </div>
-                                            <div class="record">
-                                                <div class="key">Report to</div>
-                                                <div class="value">Lead Solution Architect</div>
+                                            <div class="experience-item">
+                                                <div class="company">
+                                                    <a class="url" href="https://paques.id" target="_blank">Paques</a>
+                                                    <div class="rightend">
+                                                        <div class="exp-position">Solution Architect/Technical PM</div>
+                                                        <div class="detailbtn">
+                                                            <i class="toggleicon icon-active" data-feather="chevron-down"></i>
+                                                            <i class="toggleicon" data-feather="x"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details-container">
+                                                    <div class="details">
+                                                        <div class="record">
+                                                            <div class="key">Position</div>
+                                                            <div class="value">Solution Architect/Technical PM</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Report to</div>
+                                                            <div class="value">CEO</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Team</div>
+                                                            <div class="value">6 person, max.</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Responsibility</div>
+                                                            <ul class="value">
+                                                                <li>Conduct solution and architecture design and review for pre-development process.</li>
+                                                                <li>Reengineered product architecture to support future growth and expansion.</li>
+                                                                <li>Demonstrate the viability of solutions offered to customers through PoCs.</li>
+                                                                <li>Collaborate with stakeholders to ensure that technical aspects of projects are aligned with their needs.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Tech. Stack</div>
+                                                            <div class="value">Go, Svelte js, Linux Std Tools, AWK, PostGIS, LXC containers</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Std. & Specs.</div>
+                                                            <div class="value">IPDR, CDR, Geohash, Shapefile</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Accomplishment</div>
+                                                            <ul class="value">
+                                                                <li>Successfully managed the technical aspects of 3 projects, resulting in on-time and within budget delivery.</li>
+                                                                <li>Reengineered 1 product, Paques Media Intelligence, from the architecture to the implementation.</li>
+                                                                <li>Architected and developed a geospatial processing pipeline from end-to-end, 
+                                                                    from the processing pipeline to the frontend dashboards.</li>
+                                                                <li>Developed and deployed a custom Go processing engine that processed 80TB in average, of compressed raw 
+                                                                    text metadata from telco operations daily.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Achievement</div>
+                                                            <ul class="value">
+                                                                <li>2021 mid-year best employee.</li>
+                                                                <li>Nominated for 2021 best employee.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="record">
-                                                <div class="key">Team</div>
-                                                <div class="value">n/a</div>
+                                        </div>
+                                        <div class="experience">
+                                            <div class="time-range">
+                                                <div class="time-range-boundaries">Dec 2017 - Feb 2021</div>
+                                                <div class="time-range-duration">3 year, 3 months</div>
                                             </div>
-                                            <div class="record">
-                                                <div class="key">Responsibility</div>
-                                                <div class="value">n/a</div>
-                                            </div>
-                                            <div class="record">
-                                                <div class="key">Tech. Stack</div>
-                                                <div class="value">n/a</div>
-                                            </div>
-                                            <div class="record">
-                                                <div class="key">Accomplishment</div>
-                                                <div class="value">n/a</div>
+                                            <div class="experience-item">
+                                                <div class="company">
+                                                    <a class="url" href="https://sibernetik.co.id" target="_blank">Sibernetik</a>
+                                                    <div class="rightend">
+                                                        <div class="exp-position">Solution Architect/Technical PM</div>
+                                                        <div class="detailbtn">
+                                                            <i class="toggleicon icon-active" data-feather="chevron-down"></i>
+                                                            <i class="toggleicon" data-feather="x"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details-container">
+                                                    <div class="details">
+                                                        <div class="record">
+                                                            <div class="key">Position</div>
+                                                            <div class="value">Solution Architect/Technical PM</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Report to</div>
+                                                            <div class="value">Director</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Team</div>
+                                                            <div class="value">5 person, max.</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Responsibility</div>
+                                                            <ul class="value">
+                                                                <li>Perform design and review of solutions and architectures.</li>
+                                                                <li>Re-architecting product to more efficient and scalable.</li>
+                                                                <li>Perform PoC for technical initiatives.</li>
+                                                                <li>Drive technical aspects of projects and communicate them to stakeholders.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Tech. Stack</div>
+                                                            <div class="value">Go, Svelte js, Linux Std Tools, AWK, PostGIS, LXC containers</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Std. & Specs.</div>
+                                                            <div class="value">IPDR, CDR, Geohash, Shapefile</div>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Accomplishment</div>
+                                                            <ul class="value">
+                                                                <li>Managed technical aspects 3 projects.</li>
+                                                                <li>Re-architecting 1 product, Paques Media Intelligence.</li>
+                                                                <li>Architected and developed geospatial processing capabilities to company data processing engine.
+                                                                    End-to-end from the processing pipeline to frontend dashboards.
+                                                                </li>
+                                                                <li>Processed 80TB daily, from raw text metadata of telco operation. 
+                                                                    The size was for compressed data, and the processing was done using our own processing engine
+                                                                    written in Go and with help of Linux standard tools like <span class="code">awk</span>, 
+                                                                    <span class="code">sed</span>, <span class="code">cat</span>, <span class="code">cut</span>, 
+                                                                    <span class="code">grep</span> etc.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="record">
+                                                            <div class="key">Achievement</div>
+                                                            <ul class="value">
+                                                                <li>2021 mid-year best employee.</li>
+                                                                <li>Nominated for 2021 best employee.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -165,9 +347,49 @@
                         </div>
                     </div>
                 </div>
-                <div class="rightbar">
+                <div id="rightbar" class="rightbar">
                 </div>
             </div>
         </div>
+        <script>
+            feather.replace();
+
+            function whichTransitionEvent(){
+                var t;
+                var el = document.createElement('fakeelement');
+                var transitions = {
+                'transition':'transitionend',
+                'OTransition':'oTransitionEnd',
+                'MozTransition':'transitionend',
+                'WebkitTransition':'webkitTransitionEnd'
+                }
+
+                for(t in transitions){
+                    if( el.style[t] !== undefined ){
+                        return transitions[t];
+                    }
+                }
+            }
+
+            var transitionEnd = whichTransitionEvent();
+
+            let detailBtns = document.getElementsByClassName("detailbtn")
+            Array.from(detailBtns).forEach(el => {
+                let detailEl = el.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling;
+                el.addEventListener("click", () => {
+                    detailEl.classList.toggle("expand");
+                    Array.from(el.children).forEach(el1 => {
+                        el1.classList.toggle("icon-active");
+                    })
+                })
+
+                detailEl.addEventListener(transitionEnd, ()=>{
+                    if (detailEl.classList.contains("expand")) {
+                        detailEl.scrollIntoView({behavior: "smooth", inline: "nearest"});
+                        // setTimeout(alert("alerting!"), 2000);
+                    }
+                }, false);
+            });
+        </script>
     </body>
 </html>

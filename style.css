@@ -12,7 +12,7 @@ body {
     flex-flow: row;
     height: 60px;
     justify-content: space-between;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
 }
 
 .header .name {
@@ -36,15 +36,25 @@ body {
 .leftbar {
     display: flex;
     flex-flow: column;
-    width: 350px;
+    width: 300px;
     /* background-color: #eee; */
-    border-right: 1px solid #eee;
+    border-right: 1px solid #ccc;
 }
 
 .main-content {
     display: flex;
     flex-flow: row;
-    width: calc(100% - 351px);
+    width: calc(100% - 301px);
+}
+
+.rail-container {
+    display: flex;
+    flex-flow: column;
+    padding: 0 20px;
+    /* justify-content: center; */
+    align-items: center;
+    min-width: 840px;
+    width: calc(100% - 451px);
 }
 
 .rightbar {
@@ -52,31 +62,34 @@ body {
     flex-flow: column;
     width: 450px;
     /* background-color: #ccc; */
-    border-left: 1px solid #eee;
+    border-left: 1px solid #ccc;
 }
 
 .middle-rail {
     display: flex;
     flex-flow: column;
-    padding: 0 150px;
-    width: calc(100% - 750px);
+    width: 840px;
+    overflow: hidden;
+}
+
+.middle-rail:hover {
     overflow-y: auto;
 }
 
 .bio {
-    width: 310px;
+    width: 260px;
     height: 260px;
     padding: 20px;
     display: flex;
     flex-flow: column;
     /* justify-content: center; */
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
 }
 
 .photo {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     margin: 10px;
     background-color: #eee;
@@ -112,7 +125,7 @@ body {
     padding: 20px;
     display: flex;
     flex-flow: column;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
 }
 
 .contact-item {
@@ -136,7 +149,7 @@ body {
     padding: 20px;
     display: flex;
     flex-flow: column;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
 }
 
 .social-item {
@@ -151,7 +164,7 @@ body {
 a {
     color: navy;
     text-decoration: none;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 16px;
     /* letter-spacing: 1px; */
 }
@@ -160,11 +173,12 @@ a {
     display: flex;
     flex-flow: column;
     align-items: stretch;
+    width: 800px;
 }
 
 .rail-content-item-container {
     padding: 20px 0;
-    border-bottom: 1px solid #eee;    
+    border-bottom: 1px solid #ccc;    
 }
 
 .rail-content-item-2cols {
@@ -180,7 +194,7 @@ a {
 .rail-content-item-separator {
     width: 0;
     margin: 0 20px;
-    border-left: 1px solid #eee;
+    border-left: 1px solid #ccc;
 }
 
 .rail-content-item .head {
@@ -209,7 +223,12 @@ a {
 }
 
 .experience .time-range {
-    width: 250px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 50px;
+    width: 200px;
     font-size: 18px;
     color: navy;
 }
@@ -225,17 +244,83 @@ a {
     font-style: italic;
 }
 
+.experience .time-line {
+    align-self: center;
+    width: 1px;
+    margin-left:-100px;
+    height: calc(100% - 50px);
+    border-left: 1px solid #eee;
+}
+
 .experience .experience-item {
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
     display: flex;
     flex-flow: column;
     font-size: 16px;
 }
 
 .experience-item .company {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.company .name {
     font-size: 22px;
     font-weight: 600;
-    margin-bottom: 20px;
+}
+
+.company .rightend {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.company .exp-position {
+    padding-right: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.company .detailbtn {
+    padding: 0 10px;
+    border-left: 1px solid #ddd;
+}
+
+.company .url {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.experience .toggleicon {
+    display: none;
+}
+
+.experience .active {
+    display: flex!important;
+}
+
+.experience .expand {
+    margin-top: 0!important;
+}
+
+.experience .icon-active {
+    display: block!important;
+}
+
+.experience .details-container {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+.experience .details {
+    /* display: none; */
+    display: flex;    
+    flex-flow: column;
+    padding-bottom: 20px;
+    margin-top: -100%;
+    transition: all 0.2s;
 }
 
 .experience-item .record {
@@ -246,6 +331,7 @@ a {
 
 .experience-item .key {
     width: 120px;
+    min-width: 120px;
     font-size: 18px;
     font-style: italic;
     margin-right: 20px;
@@ -253,4 +339,18 @@ a {
 
 .experience-item .value {
     font-size: 18px;
+    margin: 0;
+}
+
+.no-border {
+    border: none;
+}
+
+.code {
+    padding: 0px 2px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
 }
