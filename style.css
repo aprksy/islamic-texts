@@ -20,7 +20,7 @@ body {
     margin-bottom: 0;
     font-size: 36px;
     font-weight: 800;
-    color: #999;
+    color: #bbb;
     letter-spacing: -2px;
 }
 
@@ -62,9 +62,9 @@ body {
 
 .rightbar {
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     width: 450px;
-    /* background-color: #ccc; */
+    background-color: #eee;
     border-left: 1px solid #ccc;
 }
 
@@ -369,4 +369,50 @@ a {
 
 ul li {
     margin-bottom: 7px;
+}
+
+.rightbar .head {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #666;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.rightbar .section {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section .subhead {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.section .record {
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #666;
+}
+
+.record .key {
+    width: 100px;
+    min-width: 100px;
+    margin-right: 20px;
+    font-style: italic;
+    color: #888;
+}
+
+.record .value {
+    text-align: right;
 }
