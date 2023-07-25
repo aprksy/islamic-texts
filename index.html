@@ -10,10 +10,6 @@
             } else if (window.screen.availWidth < 1643) {
                 showRightPanel = false;
             }
-
-            if (!showRightPanel) {
-                document.getElementById("rightPanel").style.display = "none";
-            }
         </script>
     </head>
     <body>
@@ -919,6 +915,10 @@
         </div>
         <script>
             feather.replace();
+
+            if (!showRightPanel) {
+                document.getElementById("rightbar").style.display = "none";
+            }
 
             function whichTransitionEvent(){
                 var t;
