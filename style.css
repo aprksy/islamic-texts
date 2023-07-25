@@ -328,7 +328,7 @@ a {
     display: flex;    
     flex-flow: column;
     padding-bottom: 20px;
-    margin-top: calc(-100% - 20px);
+    margin-top: calc(-100% - 80px);
     transition: all 0.2s;
 }
 
@@ -362,4 +362,8 @@ a {
     border-radius: 1px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
+}
+
+ul li {
+    margin-bottom: 7px;
 }
