@@ -405,7 +405,7 @@ ul li {
     color: #666;
 }
 
-.record .key {
+.section .key {
     width: 100px;
     min-width: 100px;
     margin-right: 20px;
@@ -413,6 +413,6 @@ ul li {
     color: #888;
 }
 
-.record .value {
+.section .value {
     text-align: right;
 }
