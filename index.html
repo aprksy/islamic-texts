@@ -165,14 +165,17 @@
                                             <div class="experience-item">
                                                 <div class="company">
                                                     <!-- <div class="name">Quipper</div> -->
-                                                    <a class="url" href="https://quipper.com" target="_blank">Quipper</a>
-                                                    <div class="rightend">
-                                                        <div class="exp-position">Solution Architect</div>
-                                                        <div class="detailbtn">
-                                                            <i class="toggleicon icon-active" data-feather="chevron-down"></i>
-                                                            <i class="toggleicon" data-feather="x"></i>
+                                                    <div class="company-header">
+                                                        <a class="url" href="https://quipper.com" target="_blank">Quipper</a>
+                                                        <div class="rightend">
+                                                            <div class="exp-position">Solution Architect</div>
+                                                            <div class="detailbtn">
+                                                                <i class="toggleicon icon-active" data-feather="chevron-down"></i>
+                                                                <i class="toggleicon" data-feather="x"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <p class="description">Quipper is an education technology company that provides e-Learning, coaching, tutoring, and assessment services for K-12 in Japan, Indonesia, the Philippines, and Mexico. The company's primary service is an online learning management system, which is used in different ways in each country where it operates.</p>
                                                 </div>
                                                 <div class="details-container">
                                                     <div class="details">
@@ -229,14 +232,19 @@
                                             </div>
                                             <div class="experience-item">
                                                 <div class="company">
-                                                    <a class="url" href="https://paques.id" target="_blank">Paques</a>
-                                                    <div class="rightend">
-                                                        <div class="exp-position">Solution Architect/Technical PM</div>
-                                                        <div class="detailbtn">
-                                                            <i class="toggleicon icon-active" data-feather="chevron-down"></i>
-                                                            <i class="toggleicon" data-feather="x"></i>
+                                                    <div class="company-header">
+                                                        <a class="url" href="https://paques.id" target="_blank">Paques</a>
+                                                        <div class="rightend">
+                                                            <div class="exp-position">Solution Architect/Technical PM</div>
+                                                            <div class="detailbtn">
+                                                                <i class="toggleicon icon-active" data-feather="chevron-down"></i>
+                                                                <i class="toggleicon" data-feather="x"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <p class="description">Paques is the leading Data Lake and Analytical solutions in the Indonesian Big Data industry.
+                                                        Paques is able to ingest a vast amount of data, unstructured and structures, in a fraction of time and designed as an Open-Platform
+                                                        which enables the system to interface seamlessly to other Best-In-Class big data platforms.</p>
                                                 </div>
                                                 <div class="details-container">
                                                     <div class="details">
@@ -304,6 +312,9 @@
                                             </div>
                                             <div class="experience-item">
                                                 <div class="company">
+                                                    <div class="company-header">
+                                                    </div>
+                                                    <p class="description"></p>
                                                     <a class="url" href="https://sibernetik.co.id" target="_blank">Sibernetik</a>
                                                     <div class="rightend">
                                                         <div class="exp-position">Solution Architect/Technical PM</div>
@@ -372,14 +383,18 @@
                                             </div>
                                             <div class="experience-item">
                                                 <div class="company">
-                                                    <a class="url" href="https://dattabot.io" target="_blank">Dattabot</a>
-                                                    <div class="rightend">
-                                                        <div class="exp-position">Senior Engineer</div>
-                                                        <div class="detailbtn">
-                                                            <i class="toggleicon icon-active" data-feather="chevron-down"></i>
-                                                            <i class="toggleicon" data-feather="x"></i>
+                                                    <div class="company-header">
+                                                        <a class="url" href="https://dattabot.io" target="_blank">Dattabot</a>
+                                                        <div class="rightend">
+                                                            <div class="exp-position">Senior Engineer</div>
+                                                            <div class="detailbtn">
+                                                                <i class="toggleicon icon-active" data-feather="chevron-down"></i>
+                                                                <i class="toggleicon" data-feather="x"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <p class="description">Dattabot is the first and a leading Bigdata analytics company focusing on data integration technology.
+                                                    </p>
                                                 </div>
                                                 <div class="details-container">
                                                     <div class="details">
@@ -430,14 +445,17 @@
                                             </div>
                                             <div class="experience-item">
                                                 <div class="company">
-                                                    <a class="url" href="https://tripatra.com" target="_blank">Tripatra</a>
-                                                    <div class="rightend">
-                                                        <div class="exp-position">Senior Engineer</div>
-                                                        <div class="detailbtn">
-                                                            <i class="toggleicon icon-active" data-feather="chevron-down"></i>
-                                                            <i class="toggleicon" data-feather="x"></i>
+                                                    <div class="company-header">
+                                                        <a class="url" href="https://tripatra.com" target="_blank">Tripatra</a>
+                                                        <div class="rightend">
+                                                            <div class="exp-position">Senior Engineer</div>
+                                                            <div class="detailbtn">
+                                                                <i class="toggleicon icon-active" data-feather="chevron-down"></i>
+                                                                <i class="toggleicon" data-feather="x"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <p class="description">TRIPATRA is a distinguished, fully-integrated Engineering, Procurement, and Construction (EPC) firm, excelling in project management and Operation & Maintenance (O&M) services across diverse industries.</p>
                                                 </div>
                                                 <div class="details-container">
                                                     <div class="details">
@@ -512,7 +530,7 @@
 
             let detailBtns = document.getElementsByClassName("detailbtn")
             Array.from(detailBtns).forEach(el => {
-                let detailEl = el.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling;
+                let detailEl = el.parentElement.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling;
                 el.addEventListener("click", () => {
                     detailEl.classList.toggle("expand");
                     Array.from(el.children).forEach(el1 => {
@@ -522,7 +540,7 @@
 
                 detailEl.addEventListener(transitionEnd, ()=>{
                     if (detailEl.classList.contains("expand")) {
-                        detailEl.scrollIntoView({behavior: "smooth", inline: "nearest"});
+                        detailEl.scrollIntoView({behavior: "smooth", block:"nearest", inline: "nearest"});
                         // setTimeout(alert("alerting!"), 2000);
                     }
                 }, false);

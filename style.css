@@ -261,20 +261,29 @@ a {
 
 .experience-item .company {
     display: flex;
+    flex-flow: column nowrap;
+}
+
+.company .company-header{
+    display: flex;
     flex-flow: row;
     justify-content: space-between;
     padding-bottom: 20px;
 }
 
-.company .name {
+.company-header .name {
     font-size: 22px;
     font-weight: 600;
 }
 
-.company .rightend {
+.company-header .rightend {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
+}
+
+.company .description {
+    margin-top: 0;
 }
 
 .company .exp-position {
