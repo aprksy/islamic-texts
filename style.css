@@ -17,8 +17,11 @@ body {
 
 .header .name {
     margin: 20px 10px;
-    font-size: 18px;
-    font-weight: 600;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-weight: 800;
+    color: #999;
+    letter-spacing: -2px;
 }
 
 .position {
