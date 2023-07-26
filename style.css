@@ -1,3 +1,7 @@
+html {
+    font-size: 10px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,36 +14,36 @@ body {
 .header {
     display: flex;
     flex-flow: row;
-    height: 60px;
+    height: 6rem;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
 }
 
 .header .name {
-    margin: 20px 10px;
+    margin: 2rem 1rem;
     margin-bottom: 0;
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: 800;
     color: #bbb;
-    letter-spacing: -2px;
+    letter-spacing: -0.2rem;
 }
 
 .position {
-    margin: 20px 10px;
-    font-size: 18px;
+    margin: 2rem 1rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 
 .content {
     display: flex;
     flex-flow: row;
-    height: calc(100vh - 61px);
+    height: calc(100vh - 6rem - 1px);
 }
 
 .leftbar {
     display: flex;
     flex-flow: column;
-    width: 300px;
+    width: 30rem;
     /* background-color: #eee; */
     border-right: 1px solid #ccc;
 }
@@ -47,23 +51,23 @@ body {
 .main-content {
     display: flex;
     flex-flow: row;
-    width: calc(100% - 301px);
+    width: calc(100% - 30rem - 1px);
 }
 
 .rail-container {
     display: flex;
     flex-flow: column;
-    padding: 0 20px;
+    padding: 0 2rem;
     /* justify-content: center; */
     align-items: center;
-    min-width: 840px;
-    width: calc(100% - 451px);
+    min-width: 84rem;
+    width: calc(100% - 45rem - 1px);
 }
 
 .rightbar {
     display: flex;
     flex-flow: column nowrap;
-    width: 450px;
+    width: 45rem;
     background-color: #eee;
     border-left: 1px solid #ccc;
 }
@@ -71,7 +75,7 @@ body {
 .middle-rail {
     display: flex;
     flex-flow: column;
-    width: 840px;
+    width: 84rem;
     overflow: hidden;
 }
 
@@ -80,9 +84,9 @@ body {
 }
 
 .bio {
-    width: 260px;
-    height: 260px;
-    padding: 20px;
+    width: 26rem;
+    height: 26rem;
+    padding: 2rem;
     display: flex;
     flex-flow: column;
     /* justify-content: center; */
@@ -91,27 +95,27 @@ body {
 }
 
 .photo {
-    width: 140px;
-    height: 140px;
+    width: 14rem;
+    height: 14rem;
     border-radius: 50%;
-    margin: 10px;
+    margin: 1rem;
     background-color: #eee;
     background-image: url("images/profile-pic.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border: 1px solid #eee;
-    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 0 0.8rem 0px rgba(0, 0, 0, 0.2) inset;
 }
 
 .biodata {
-    margin-top: 20px;
-    font-size: 16px;
+    margin-top: 2rem;
+    font-size: 1.6rem;
     text-align: center;
 }
 
 .biodata .name {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -120,23 +124,23 @@ body {
     font-weight: bold;
     color: navy;
     content: "CONTACTS";
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
 }
 
 .contact {
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     flex-flow: column;
     border-bottom: 1px solid #ccc;
 }
 
 .contact-item {
-    padding: 7px 0;
+    padding: 0.7rem 0;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #666;
 }
 
@@ -144,23 +148,23 @@ body {
     font-weight: bold;
     color: navy;
     content: "SOCIAL LINKS";
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
 }
 
 .social {
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     flex-flow: column;
     border-bottom: 1px solid #ccc;
 }
 
 .social-item {
-    padding: 7px 0;
+    padding: 0.7rem 0;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #666;
 }
 
@@ -168,7 +172,7 @@ a {
     color: navy;
     text-decoration: none;
     /* font-weight: 600; */
-    font-size: 16px;
+    font-size: 1.6rem;
     /* letter-spacing: 1px; */
 }
 
@@ -176,11 +180,11 @@ a {
     display: flex;
     flex-flow: column;
     align-items: stretch;
-    width: 800px;
+    width: 80rem;
 }
 
 .rail-content-item-container {
-    padding: 20px 0;
+    padding: 2rem 0;
     border-bottom: 1px solid #ccc;    
 }
 
@@ -196,33 +200,33 @@ a {
 
 .rail-content-item-separator {
     width: 0;
-    margin: 0 20px;
+    margin: 0 2rem;
     border-left: 1px solid #ccc;
 }
 
 .rail-content-item .head {
-    padding: 10px 0;
-    font-size: 24px;
+    padding: 1rem 0;
+    font-size: 2.4rem;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 0.3rem;
 }
 
 .rail-content-item .body-big-font {
-    font-size: 20px;
+    font-size: 2rem;
     color: #666;
     font-style: italic;
 }
 
 .rail-content-item .body {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #666;
 }
 
 .experience {
-    padding: 20px 0;
+    padding: 2rem 0;
     display: flex;
     flex-flow: row;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .experience .time-range {
@@ -230,19 +234,19 @@ a {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 50px;
-    width: 200px;
-    font-size: 18px;
+    height: 5rem;
+    width: 20rem;
+    font-size: 1.8rem;
     color: navy;
 }
 
 .experience .time-range-boundaries {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: navy;
 }
 
 .experience .time-range-duration {
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #666;
     font-style: italic;
 }
@@ -256,10 +260,10 @@ a {
 }
 
 .experience .experience-item {
-    width: calc(100% - 200px);
+    width: calc(100% - 20rem);
     display: flex;
     flex-flow: column;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .experience-item .company {
@@ -271,11 +275,11 @@ a {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
 }
 
 .company-header .name {
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 600;
 }
 
@@ -290,18 +294,18 @@ a {
 }
 
 .company .exp-position {
-    padding-right: 20px;
-    font-size: 18px;
+    padding-right: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
 }
 
 .company .detailbtn {
-    padding: 0 10px;
+    padding: 0 1rem;
     border-left: 1px solid #ddd;
 }
 
 .company .url {
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 600;
 }
 
@@ -330,27 +334,27 @@ a {
     /* display: none; */
     display: flex;    
     flex-flow: column;
-    padding-bottom: 20px;
-    margin-top: calc(-100% - 80px);
+    padding-bottom: 2rem;
+    margin-top: calc(-100% - 8rem);
     transition: all 0.2s;
 }
 
 .experience-item .record {
     display: flex;
     flex-flow: row;
-    padding-bottom: 6px;
+    padding-bottom: 0.6rem;
 }
 
 .experience-item .key {
-    width: 120px;
-    min-width: 120px;
-    font-size: 18px;
+    width: 12rem;
+    min-width: 12rem;
+    font-size: 1.8rem;
     font-style: italic;
-    margin-right: 20px;
+    margin-right: 2rem;
 }
 
 .experience-item .value {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin: 0;
 }
 
@@ -359,56 +363,56 @@ a {
 }
 
 .code {
-    padding: 0px 2px;
+    padding: 0px 0.2rem;
     background-color: #eee;
     border: 1px solid #ddd;
-    border-radius: 1px;
+    border-radius: 0.1rem;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 ul li {
-    margin-bottom: 7px;
+    margin-bottom: 0.7rem;
 }
 
 .rightbar .head {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
     color: #666;
-    padding: 20px;
+    padding: 2rem;
     border-bottom: 1px solid #ccc;
 }
 
 .rightbar .section {
     display: flex;
     flex-flow: column nowrap;
-    padding: 20px;
-    padding-bottom: 10px;
+    padding: 2rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #ccc;
 }
 
 .section .subhead {
-    margin-bottom: 20px;
-    font-size: 16px;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
     color: #666;
 }
 
 .section .record {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #666;
 }
 
 .section .key {
-    width: 100px;
-    min-width: 100px;
-    margin-right: 20px;
+    width: 10rem;
+    min-width: 10rem;
+    margin-right: 2rem;
     font-style: italic;
     color: #888;
 }
