@@ -413,6 +413,62 @@
                 "Collaborated with the project team to successfully accomplish the MRS-H251 ESD and F&G Obsolete System Revamping project at Total Indonesie."
             ],
             "achievements": []
+        },
+        {
+            "start": "2000-01",
+            "end": "2004-12",
+            "employment_type": "full-time",
+            "work_environment": "Onsite",
+            "company": "Professional Service Provider",
+            "company_description": "Rendered specialized computing-related professional services to small-sized businesses, including internet cafes, game centers, restaurants, and small to midsize buildings. Focused primarily on custom application development and integrating devices to automate tasks or enforce access restrictions.",
+            "positions": ["Programmer"],
+            "report_to": "",
+            "team": [],
+            "technologies": [
+                "Borland Delphi", "Paradox DB", "MySQL", "Macromedia Flash"
+            ],
+            "standards": [],
+            "responsibilities": [
+                "Client Communication: Interacting with clients to understand project requirements, discussing project scope, and providing regular updates on progress.",
+                "Software Development: Writing, testing, and maintaining code for various projects based on client specifications and industry best practices.",
+                "Problem Solving: Analyzing complex technical challenges and devising effective solutions to meet project objectives.",
+                "Project Planning: Creating project timelines, setting milestones, and managing project deliverables to ensure timely completion.",
+                "Client Satisfaction: Ensuring client satisfaction by delivering projects that meet or exceed expectations and providing excellent customer support."
+            ],
+            "accomplishments": [
+                "Developed and implemented customized billing applications for multiple internet cafes and game centers.",
+                "Designed and deployed a comprehensive building and tenant management system for a midsize building in Jakarta.",
+                "Created and launched dynamic websites and digital profiles for various local music bands.",
+                "Produced interactive digital backdrops for numerous local events."
+            ],
+            "achievements": []
         }
-    ]
+    ],
+    "personal_showcases": {
+        "labs": [
+            {"name": "OSes", "value": ["Archlinux", "FreeBSD", "Windows 10"]},
+            {"name": "Shell", "value": ["zsh", "bash", "tcsh"]},
+            {"name": "Env. Isolation", "value": ["LXC", "Podman", "Qemu/KVM"]}
+        ],
+        "dev_tools": [
+            {"name": "IDEs", "value": ["VSCode", "Jupyter Lab", "Code::blocks", "Codelite"]},
+            {"name": "Programming Languages", "value": ["C++", "Go", "Python", "FPC", "PHP"]},
+            {"name": "Versioning", "value": ["Git", "Github"]}
+        ],
+        "learnings": [
+            {"name": "Programming Language", "value": ["Rust", "Vlang", "Elixir", "C++17/20"]},
+            {"name": "On-going Courses", "value": [
+                {"title": "The NodeJs Master Class", "provider": "Pirple", "url": ""},
+                {"title": "LAFF-On Programming for High Performance", "provider": "EDX", "url": ""},
+                {"title": "High Performance Computing", "provider": "Udacity", "url": ""},
+                {"title": "The Nuts and Bolts of OAuth 2.0", "provider": "Udemy", "url": ""}
+            ]}
+        ],
+        "projects": [
+            {"name": "Extended Petrinet Library", "value": ["C++", "Go"]},
+            {"name": "TDD Boilerplate Initializer", "value": ["Python"]},
+            {"name": "High-Performance Massive Text Data Processing system (PoC)", "value": ["C++"]},
+            {"name": "SVG Animation Generator", "value": ["Go", "Matter.js", "Svelte.js"]}
+        ]
+    }
 }
