@@ -1,64 +1,57 @@
 {
     "name": "Agung Prakasya",
+    "sex": "male",
     "birth": {
-        "date": "1975-05-20",
+        "date": "May 20, 1975",
         "city": "Ciamis"
     },
     "nationality": "Indonesia",
     "contact": {
         "email": "aprksy@gmail.com",
         "phone": "+62 8197519750",
-        "messaging": [
-            {
-                "name": "whatsapp",
+        "messaging": {
+            "whatsapp": {
                 "url": "https://wa.me/628197519750",
                 "label": "+62 8197519750"
             },
-            {
-                "name": "telegram",
+            "telegram": {
                 "url": "https://t.me/aprksy",
                 "label": "aprksy"
             }
-        ],
+        },
         "address": {
             "city": "Jakarta",
             "timezone": "Asia/Jakarta",
-            "utc_offset": 7,
+            "utc_offset": "+7",
             "country": "Indonesia"
         }
     },
-    "social_links": [
-        {
-            "name": "website",
+    "social_links": {
+        "website": {
             "url": "https://aprksy.xyz",
             "label": "aprksy.xyz"
         },
-        {
-            "name": "blog",
+        "blog": {
             "url": "https://blog.aprksy.xyz",
             "label": "blog.aprksy.xyz"
         },
-        {
-            "name": "resume",
+        "resume": {
             "url": "https://resume.aprksy.xyz",
             "label": "resume.aprksy.xyz"
         },
-        {
-            "name": "linkedin",
+        "linkedin": {
             "url": "https://linkedin.com/in/agungprakasya",
             "label": "linkedin.com/in/agungprakasya"
         },
-        {
-            "name": "github",
+        "github": {
             "url": "https://github.com/aprksy",
             "label": "github.com/aprksy"
         },
-        {
-            "name": "twitter",
+        "twitter": {
             "url": "https://twitter.com/aprksy",
             "label": "@aprksy"
         }
-    ],
+    },
     "education": [
         {
             "level": "Degree",
@@ -81,7 +74,7 @@
             "confidence_level": 9
         }
     ],
-    "qualification_statements": [
+    "qualification": [
         "Highly analytical math graduate with a systematic problem-solving approach. A collaborative team player, adept at building engagement through a personal approach and trust, fostering a cohesive and productive working environment.",
         "Skilled in Linux command line, leveraging standard tools for rapid prototyping and idea validation before creating full-fledged solutions. A polyglot coder with proficiency in Go, C++, Object Pascal, Python, and Javascript, complemented by some experience in PHP, Java, and Flutter.",
         "Enthusiastic about continuous learning and currently expanding coding skills to include Rust, Elixir, Vlang, and other languages, staying at the forefront of emerging technologies."
