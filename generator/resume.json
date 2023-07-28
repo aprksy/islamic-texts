@@ -447,7 +447,7 @@
             "achievements": []
         }
     ],
-    "personal_showcases": {
+    "personal_showcase": {
         "labs": [
             {"name": "OSes", "value": ["Archlinux", "FreeBSD", "Windows 10"]},
             {"name": "Shell", "value": ["zsh", "bash", "tcsh"]},

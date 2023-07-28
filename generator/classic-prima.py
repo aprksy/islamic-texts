@@ -1,5 +1,8 @@
 import json
 from string import Template
+from datetime import date
+import subprocess
+
 
 # render_resume renders the resume as tex file
 def render_resume():
@@ -16,11 +19,13 @@ def render_resume():
     src += render_career_objective(resume["career_objective"])
     src += render_personal_research(resume["personal_research"])
     src += render_experiences(resume["experience"])
+    src += render_personal_showcase(resume["personal_showcase"])
     src += render_closing()
-    print(src)
     target = open("temp-resume.tex", "wt")
     target.write(src)
     target.close()
+    result = subprocess.run(["tectonic", "temp-resume.tex", "--outfmt", "pdf"], capture_output=True, text=True)
+    print(result.stdout)
 
 def render_opening():
     return r"""
@@ -249,9 +254,7 @@ def render_experience(exp):
 	\vspace{18pt}
 	\section{Achievement}
 	\begin{flushleft}
-        \begin{itemize}
-		\footnotesize{$achievements}
-        \end{itemize}
+        \footnotesize{$achievements}
 	\end{flushleft}
 \end{minipage}
 
@@ -262,22 +265,148 @@ def render_experience(exp):
     company_url = exp["company_url"]
     start = to_month_year(exp["start"])
     end = "present" if exp["end"] == "" else to_month_year(exp["end"])
-    duration = to_duration(start, end)
+    duration = to_duration(exp["start"], exp["end"])
     position = ", ".join(exp["positions"])
     reports_to = exp["report_to"]
     teams = ", ".join(exp["team"])
     company_description = exp["company_description"]
-    responsibilities = "\n\n".join(["\item " + r for r in exp["responsibilities"]])
-    accomplishments = "\n\n".join(["\item " + r for r in exp["accomplishments"]])
+    responsibilities = "\n".join(["\item " + r for r in exp["responsibilities"]])
+    accomplishments = "\n".join(["\item " + r for r in exp["accomplishments"]])
     techstack = ", ".join(exp["technologies"])
     standards = "(none)" if len(exp["standards"]) == 0 else ", ".join(["\href{" + s["url"] + "}{" + s["name"] + "}" for s in exp["standards"]])
-    achievements = "(none specific)" if len(exp["achievements"]) == 0 else "\n\n".join(["\item " + r for r in exp["achievements"]])
+    achievements = "\\vspace{2.6pt}\n(none specific)"
+    if len(exp["achievements"]) == 1:
+        achievements = "\\vspace{2.6pt}\n" + exp["achievements"][0]
+    elif len(exp["achievements"]) > 1:
+        achievements = "\n".join(["\item " + r for r in exp["achievements"]])
+        achievements = "\\begin{itemize}\n" + achievements + "\n\end{itemize}"
     strTpl = Template(str)
     return strTpl.substitute(company_url=company_url, company=company, start=start, end=end,
                             duration=duration, position=position, reports_to=reports_to,
                             teams=teams, company_description=company_description,
                             responsibilities=responsibilities, accomplishments=accomplishments,
                             techstack=techstack, standards=standards, achievements=achievements)
+
+def render_personal_showcase(showcase):
+    str = r"""
+\section{\centerline{PERSONAL SHOWCASE}}
+\vspace{18pt}
+\begin{minipage}[t]{0.2\linewidth}
+	\section{labs}
+	\footnotesize{
+		\begin{minipage}[t]{1.0\linewidth}
+			\raggedright{\emph{prog. languages}}
+		\end{minipage}
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedleft{C++, Go, Python, FPC, \LaTeX}
+			\vspace{5pt}
+		\end{minipage}
+		\rule{1.0\textwidth}{0.1pt}
+
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedright{\emph{IDEs}}
+		\end{minipage}
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedleft{VSCode, Jupyter-Lab, Code::blocks, Codelite}
+			\vspace{5pt}
+		\end{minipage}
+		\rule{1.0\textwidth}{0.1pt}
+
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedright{\emph{OSes}}
+		\end{minipage}
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedleft{Archlinux, FreeBSD, Win10}
+			\vspace{5pt}
+		\end{minipage}
+		\rule{1.0\textwidth}{0.1pt}
+		
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedright{\emph{Virtualizations}}
+		\end{minipage}
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedleft{LXC, Podman, Qemu/KVM}
+		\end{minipage}
+	}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\linewidth}
+	\section{current learnings}
+	\footnotesize{		
+		\begin{minipage}[t]{1.0\linewidth}
+			\raggedright{\emph{prog. languages}}
+		\end{minipage}
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedleft{Rust, Vlang, Elixir, C++17/20}
+			\vspace{5pt}
+		\end{minipage}
+		\rule{1.0\textwidth}{0.1pt}
+
+		\begin{minipage}[t]{0.5\linewidth}
+			\vspace{5pt}
+			\raggedright{\emph{on-going courses}}
+		\end{minipage}
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\begin{flushleft}
+				\begin{itemize}
+					\item The NodeJs Master Class (Pirple)
+					\item LAFF-On Programming for High Performance (EDX)
+					\item High Performance Computing (Udacity)
+					\item The Nuts and Bolts of OAuth 2.0 (Udemy)
+				\end{itemize}
+			\end{flushleft}
+			\vspace{5pt}
+		\end{minipage}
+	}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\linewidth}
+	\section{current projects}
+	\footnotesize{
+		\begin{minipage}[t]{1.0\linewidth}
+			\raggedright{\emph{designing}}
+		\end{minipage}
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\begin{flushleft}
+				\begin{itemize}
+					\item High-Performance Massive Text Data Processing system (C++)
+				\end{itemize}
+			\end{flushleft}
+			\vspace{5pt}
+		\end{minipage}
+		\rule{1.0\textwidth}{0.1pt}
+
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\raggedright{\emph{on-going projects}}
+		\end{minipage}
+		\begin{minipage}[t]{1.0\linewidth}
+			\vspace{5pt}
+			\begin{flushleft}
+				\begin{itemize}
+					\item Extended Petrinet Library (C++, Go)
+					\item TDD Boilerplate Initializer (Python)
+					\item SVG Animation Generator (Go, Javascript, Svelte)
+				\end{itemize}
+			\end{flushleft}
+			\vspace{5pt}
+		\end{minipage}
+	}
+\end{minipage}
+"""
+    # strTpl = Template(str)
+    # return strTpl.substitute(showcase=showcase)
+    return str
 
 
 def to_month_year(ym):
@@ -288,6 +417,37 @@ def to_month_year(ym):
     return month[int(d[1])-1] + " " + d[0]
 
 def to_duration(start, end):
-    return "1 year 4 months"
+    d1 = get_date(start)
+    d2 = get_date(end)
+    delta = d2 - d1
+    ycount = int(delta.days / 365)
+    dayRemainder = delta.days % 365
+    mcount = int(dayRemainder / 30)
+    dayRemainder = dayRemainder % 30
+    if dayRemainder >= 15:
+        mcount += 1
+    ystr = ""
+    mstr = ""
+    if ycount == 1:
+        ystr = "1 year"
+    else:
+        ystr = str(ycount) + " years"
+    if mcount == 0:
+        mstr = ""
+    elif mcount == 1:
+        mstr = "1 month"
+    else:
+        mstr = str(mcount) + " months"
+    return ystr + " " + mstr
+
+def get_date(value):
+    d = value.split("-")
+    if len(d) > 1:
+        y, m = d[0], d[1]
+        if y != "" and m != "":
+            return date(int(y), int(m), 1)
+    else:
+        return date.today()
+        
 
 render_resume()
