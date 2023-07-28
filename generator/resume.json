@@ -64,7 +64,7 @@
             "max_grade": 4
         }
     ],
-    "summary": "23 Years of total experience; 23+ years of coding in various languages; 8 years in bigdata and data-streams; 11 years of experience in energy and other industries —mostly on engeering, solution architect & specialist position;",
+    "summary": "23 Years of total experience; 23+ years of coding in various languages; 7 years in bigdata and data-streams; 9 years of experience in energy and other industries —mostly on engeering, solution architect \\& specialist position",
     "skills": [
         {
             "type": "Programming",
@@ -92,6 +92,7 @@
             "employment_type": "full-time",
             "work_environment": "Fully Remote",
             "company": "Quipper",
+            "company_url": "https://quipper.com",
             "company_description": "Quipper is an education technology company that provides e-Learning, coaching, tutoring, and assessment services for K-12 in Japan, Indonesia, the Philippines, and Mexico. The company's primary service is an online learning management system, which is used in different ways in each country where it operates.",
             "positions": ["Solution Architect"],
             "report_to": "Lead Solution Architect",
@@ -136,6 +137,7 @@
             "employment_type": "full-time",
             "work_environment": "Remote",
             "company": "Paques",
+            "company_url": "https://paques.id",
             "company_description": "Paques is a prominent player in the Indonesian Big Data industry, offering top-notch Data Lake and Analytical solutions. The company excels at processing vast amounts of data, both unstructured and structured, with remarkable speed. Additionally, Paques stands out as an Open-Platform solution, seamlessly interfacing with other Best-In-Class big data platforms for enhanced functionality and versatility.",
             "positions": ["Solution Architect", "Technical PM"],
             "report_to": "CEO",
@@ -191,6 +193,7 @@
             "employment_type": "full-time",
             "work_environment": "Hybrid",
             "company": "Sibernetik",
+            "company_url": "https://sibernetik.co.id",
             "company_description": "Sibernetik is a pioneering provider of Stream-based Bigdata solutions in Indonesia, leveraging cutting-edge technologies such as Confluent Kafka, Elastic stack, and Qlik. Additionally, the company offers its own proprietary industrial surveillance product, specializing in vessel and aviation tracking, among other applications.",
             "positions": ["Solution Architect", "Technical PM"],
             "report_to": "CEO",
@@ -232,6 +235,7 @@
             "employment_type": "full-time",
             "work_environment": "Onsite",
             "company": "Dattabot",
+            "company_url": "https://dattabot.io",
             "company_description": "Dattabot pioneers the field of Bigdata analytics with a specialized focus on data integration technology. The company leverages cutting-edge technologies such as the Apache Hadoop ecosystem, Cassandra, and Talend. Its suite of services empowers businesses to extract valuable insights and uncover hidden information from their data, beyond the capabilities of regular analytics.",
             "positions": ["Senior Engineer"],
             "report_to": "Engineering Manager",
@@ -263,6 +267,7 @@
             "employment_type": "full-time",
             "work_environment": "Hybrid",
             "company": "Dowedo",
+            "company_url": "https://dowedo.id",
             "company_description": "Dowedo was an ambitious early-stage startup in the tourism traveling packages marketplace. Although we successfully validated the idea, an in-depth post-MVP market study led us to make the difficult decision to pursue an exit strategy.",
             "positions": ["CTO", "Co-founder"],
             "report_to": "CEO",
@@ -290,7 +295,8 @@
             "employment_type": "full-time",
             "work_environment": "Onsite",
             "company": "Tripatra",
-            "company_description": "Tripatra is a well-established and reputable integrated engineering, procurement, and construction (EPC) company based in Indonesia. With extensive expertise in project management and operation & maintenance (O&M) services, Tripatra offers comprehensive solutions for various industries. They are committed to delivering high-quality services, focusing on safety, sustainability, and innovation to meet their clients' needs. As a leading EPC player, Tripatra continues to contribute significantly to Indonesia's industrial development and economic growth.",
+            "company_url": "https://tripatra.com",
+            "company_description": "Tripatra is a well-established and reputable integrated engineering, procurement, and construction (EPC) company based in Indonesia. With extensive expertise in project management and operation \\& maintenance (O\\&M) services, Tripatra offers comprehensive solutions for various industries.",
             "positions": ["Senior Engineer", "Analyst"],
             "report_to": "Project Control Manager",
             "team": ["Third Party"],
@@ -315,6 +321,7 @@
             "employment_type": "full-time",
             "work_environment": "Onsite",
             "company": "Sintesa",
+            "company_url": "https://sintesatama.co.id",
             "company_description": "Sintesa operated as a managed IT solution provider, catering specifically to downstream oil and gas companies in the distribution field. The company offered comprehensive IT services, including hardware, software, operators, and non-core chore activities, allowing clients to focus on their core business. Unfortunately, Sintesa faced challenges when its primary client's holding company entered the competition, leading to the company's decision to cease operations.",
             "positions": ["CEO", "Founder"],
             "report_to": "",
@@ -340,7 +347,8 @@
             "employment_type": "contract-based",
             "work_environment": "Onsite",
             "company": "KPC",
-            "company_description": "KPC (Kaltim Prima Coal) is a prominent coal mining company based in Sangatta, East Kalimantan, Indonesia. As one of the largest open-pit mining operations in the world, KPC plays a pivotal role in the global coal industry. With a focus on operational excellence and sustainability, KPC extracts and supplies high-quality coal to meet both domestic and international demand. The company's commitment to safety, environmental responsibility, and community development has established it as a key player in the Indonesian mining sector, contributing to the region's economic growth and energy needs.",
+            "company_url": "https://kpc.co.id",
+            "company_description": "KPC (Kaltim Prima Coal) is a prominent coal mining company based in Sangatta, East Kalimantan, Indonesia. As one of the largest open-pit mining operations in the world, KPC plays a pivotal role in the global coal industry.",
             "positions": ["Consultant", "OPC Specialist"],
             "report_to": "Engineering Manager",
             "team": [],
@@ -374,7 +382,8 @@
             "employment_type": "contract-based",
             "work_environment": "Onsite",
             "company": "Siemens",
-            "company_description": "Siemens Indonesia is a leading technology company with a strong presence in the Indonesian market. As a subsidiary of Siemens AG, a global powerhouse in various industries, Siemens Indonesia offers cutting-edge solutions in electrification, automation, and digitalization. The company provides a wide range of products, systems, and services across multiple sectors, including energy, infrastructure, manufacturing, and healthcare. With a focus on innovation and sustainability, Siemens Indonesia is committed to advancing Indonesia's industrial development, improving infrastructure, and contributing to the country's economic growth.",
+            "company_url": "https://siemens.co.id",
+            "company_description": "Siemens Indonesia is a leading technology company with a strong presence in the Indonesian market. As a subsidiary of Siemens AG, a global powerhouse in various industries, Siemens Indonesia offers cutting-edge solutions in electrification, automation, and digitalization. The company provides a wide range of products, systems, and services across multiple sectors, including energy, infrastructure, manufacturing, and healthcare.",
             "positions": ["Control System Engineer"],
             "report_to": "Engineering Manager",
             "team": [],
@@ -403,7 +412,7 @@
                 "Compliance and safety: Ensuring that control system designs and implementations comply with relevant safety standards and regulations to maintain a safe working environment."
             ],
             "accomplishments": [
-                "Collaborated with the project team to successfully accomplish the MRS-H251 ESD and F&G Obsolete System Revamping project at Total Indonesie."
+                "Collaborated with the project team to successfully accomplish the MRS-H251 ESD and F\\&G Obsolete System Revamping project at Total Indonesie."
             ],
             "achievements": []
         },
@@ -413,6 +422,7 @@
             "employment_type": "full-time",
             "work_environment": "Onsite",
             "company": "Professional Service Provider",
+            "company_url": "#",
             "company_description": "Rendered specialized computing-related professional services to small-sized businesses, including internet cafes, game centers, restaurants, and small to midsize buildings. Focused primarily on custom application development and integrating devices to automate tasks or enforce access restrictions.",
             "positions": ["Programmer"],
             "report_to": "",
