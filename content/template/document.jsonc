@@ -1,0 +1,26 @@
+{
+    // the title of the document
+    "title": "",
+
+    // the author of the CONTENT, not the document (see typesetter)
+    "author": "",
+
+    // the version of the DOCUMENT, not the content
+    "version": "",
+
+    // the typesetter
+    "typesetter": "",
+
+    // instruction related to the document and/or the content
+    "instruction": {},
+
+    // the license of the document and/or the content
+    "license": {},
+
+    // content of the document itself; 
+    // can be combination of `part`, `text`, `verse`, `image`, `diagram` and/or other
+    "content": {},
+
+    // typesetter message/text to the reader
+    "notes": {}
+}
