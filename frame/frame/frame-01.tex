@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[paper=a4paper, verbose, centering]{geometry}
+\usepackage{pgfornament}
+\usepackage{xcolor}
+\usetikzlibrary{chains}
+
+\title{Title}
+\author{Author}
+\date{}
+
+\usepackage{titling}% for demo only
+
+\begin{document}
+
+\maketitle
+\begin{tikzpicture}[remember picture, overlay, start chain, node distance=-2mm,color=olive]
+    \node (nworn) [shift={(10mm,-10mm)}, anchor=north west, on chain ] at (current page.north west){\pgfornament[width=10mm]{27}};
+    \foreach \i in {1,...,15}
+      {\node [on chain] {\pgfornament[width=5mm]{28}};
+      \node [on chain] {\pgfornament[width=5mm]{28}};
+      }
+
+    \node (neorn) [on chain] {\pgfornament[width=10mm,symmetry=v]{27}};
+    \node [continue chain, on chain, rotate=-90, shift={(4mm,-4.5mm)}] {\pgfornament[width=5mm]{28}};
+    \foreach \i in {1,...,45}
+      \node [continue chain, on chain, rotate=-90, shift={(-2mm,2mm)}] {\pgfornament[width=5mm]{28}};
+
+    \node (seorn) [on chain, shift={(-4mm,-4mm)}] {\pgfornament[width=10mm,symmetry=c]{27}};
+    \foreach \i in {1,...,15}
+      {\node [continue chain=going left, on chain] {\pgfornament[width=5mm,symmetry=h]{28}};
+      \node [continue chain=going left, on chain] {\pgfornament[width=5mm,symmetry=h]{28}};}
+    \node (sworn) [on chain] {\pgfornament[width=10mm,symmetry=h]{27}};
+
+    \node [continue chain, on chain, rotate=-90, shift={(-4mm,4.5mm)}] {\pgfornament[width=5mm,symmetry=h]{28}};
+    \foreach \i in {1,...,45}
+      \node [continue chain, on chain, rotate=-90, shift={(2mm,-2mm)}] {\pgfornament[width=5mm,symmetry=h]{28}};
+\end{tikzpicture}
+
+\thispagestyle{empty}
+\clearpage
+
+\end{document}
