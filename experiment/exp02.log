@@ -1,0 +1,36 @@
+[0m[1m[33mwarning:[0m accessing absolute path `/usr/share/fonts/qurancomplex/UthmanicHafs_V22.ttf`; build may not be reproducible in other environments
+[0m[1m[33mwarning:[0m accessing absolute path `/usr/share/fonts/qurancomplex/Symbols1_Ver02.otf`; build may not be reproducible in other environments
+[0m[1m[33mwarning:[0m exp02.tex:19: 
+Missing character: There is no   (U+0020) in font KFGQPC Arabic Symbols 01/OT!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Arabic Symbols 01/OT"
+[0m[1m[33mwarning:[0m   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+[0m[1m[33mwarning:[0m   choose a different font that covers the unrepresentable character(s)
+[0m[1m[33mwarning:[0m exp02.tex:19: Missing character: There is no   (U+0020) in font KFGQPC Arabic Symbols 01/OT!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Arabic Symbols 01/OT"
+[0m[1m[33mwarning:[0m exp02.tex:19: Missing character: There is no   (U+0020) in font KFGQPC Arabic Symbols 01/OT:language=dflt;!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Arabic Symbols 01/OT:language=dflt;"
+[0m[1m[33mwarning:[0m exp02.tex:19: Missing character: There is no   (U+0020) in font KFGQPC Arabic Symbols 01/OT:language=dflt;!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Arabic Symbols 01/OT:language=dflt;"
+[0m[1m[33mwarning:[0m accessing absolute path `/usr/share/fonts/qurancomplex/Basmalah Ver01.otf`; build may not be reproducible in other environments
+[0m[1m[33mwarning:[0m exp02.tex:20: Missing character: There is no   (U+0020) in font KFGQPC Basmalah Regular/OT!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Basmalah Regular/OT"
+[0m[1m[33mwarning:[0m exp02.tex:20: Missing character: There is no   (U+0020) in font KFGQPC Basmalah Regular/OT!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Basmalah Regular/OT"
+[0m[1m[33mwarning:[0m exp02.tex:20: Missing character: There is no   (U+0020) in font KFGQPC Basmalah Regular/OT:language=dflt;!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Basmalah Regular/OT:language=dflt;"
+[0m[1m[33mwarning:[0m exp02.tex:20: Missing character: There is no   (U+0020) in font KFGQPC Basmalah Regular/OT:language=dflt;!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Basmalah Regular/OT:language=dflt;"
+[0m[1m[33mwarning:[0m accessing absolute path `/usr/share/fonts/qurancomplex/Shadatain Ver01.otf`; build may not be reproducible in other environments
+[0m[1m[33mwarning:[0m exp02.tex:21: Missing character: There is no   (U+0020) in font KFGQPC Shadatain Regular/OT!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Shadatain Regular/OT"
+[0m[1m[33mwarning:[0m exp02.tex:21: Missing character: There is no   (U+0020) in font KFGQPC Shadatain Regular/OT!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Shadatain Regular/OT"
+[0m[1m[33mwarning:[0m exp02.tex:21: Missing character: There is no   (U+0020) in font KFGQPC Shadatain Regular/OT:language=dflt;!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Shadatain Regular/OT:language=dflt;"
+[0m[1m[33mwarning:[0m exp02.tex:21: Missing character: There is no   (U+0020) in font KFGQPC Shadatain Regular/OT:language=dflt;!
+[0m[1m[33mwarning:[0m could not represent character " " (0x20) in font "KFGQPC Shadatain Regular/OT:language=dflt;"
+[0m[1m[31merror:[0m exp02.tex:59: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+[0m[1m[31merror:[0m halted on potentially-recoverable error as specified
