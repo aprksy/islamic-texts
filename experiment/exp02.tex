@@ -2,43 +2,92 @@
 \usepackage[paper=a4paper, verbose, centering]{geometry}
 \usepackage{pgfornament}
 \usepackage{xcolor}
+\colorlet{myolive}{olive!30!lightgray}
+
 \usetikzlibrary{chains}
 \usepackage{fontspec}
 \usepackage{polyglossia}
-\setdefaultlanguage{english}
-\setotherlanguage{arabic}
-\newfontfamily\arabicfont[Script=Arabic,ItalicFont=*,Scale=1.75]{KFGQPC HAFS Uthmanic Script}
+\usepackage{eso-pic}
+\usepackage{parskip}
+\usepackage{pdfpages}
+
+\setdefaultlanguage{arabic}
+\setotherlanguage{english}
+
+\newfontfamily\arabicfont[Script=Arabic,ItalicFont=*,Scale=1.5]{KFGQPC HAFS Uthmanic Script}
+\newfontfamily\symbolfont[Script=Arabic,ItalicFont=*,Scale=2.0]{KFGQPC Arabic Symbols 01}
+\newfontfamily\basmalahfont[Script=Arabic,ItalicFont=*,Scale=2.0]{KFGQPC Basmalah}
+\newfontfamily\shadatainfont[Script=Arabic,ItalicFont=*,Scale=2.0]{KFGQPC Shadatain}
+
+\newcommand{\bismillah}[1]{{\symbolfont{\XeTeXglyph 2}}}
+\newcommand{\basmalah}[1]{{\basmalahfont{\XeTeXglyph 20}}}
+\newcommand{\thayyibah}[1]{{\shadatainfont{\XeTeXglyph 7}}}
+\newcommand{\shalawat}[1]{{\symbolfont{\XeTeXglyph 41}}}
+\newcommand{\shalawatsmall}[1]{{\vspace{0.5cm}\symbolfont{\XeTeXglyph 72}}\vspace{-0.5cm}}
+
+\AddToShipoutPictureBG{
+  \begin{english}
+    \begin{tikzpicture}[remember picture, overlay, start chain, node distance=-2mm,color=myolive]
+        \node (nworn) [shift={(10mm,-10mm)}, anchor=north west, on chain ] at (current page.north west){\pgfornament[width=10mm]{27}};
+        \foreach \i in {1,...,15}
+          {\node [on chain] {\pgfornament[width=5mm]{28}};
+          \node [on chain] {\pgfornament[width=5mm]{28}};
+          }
+
+        \node (neorn) [on chain] {\pgfornament[width=10mm,symmetry=v]{27}};
+        \node [continue chain, on chain, rotate=-90, shift={(4mm,-4.5mm)}] {\pgfornament[width=5mm]{28}};
+        \foreach \i in {1,...,45}
+          \node [continue chain, on chain, rotate=-90, shift={(-2mm,2mm)}] {\pgfornament[width=5mm]{28}};
+
+        \node (seorn) [on chain, shift={(-4mm,-4mm)}] {\pgfornament[width=10mm,symmetry=c]{27}};
+        \foreach \i in {1,...,15}
+          {\node [continue chain=going left, on chain] {\pgfornament[width=5mm,symmetry=h]{28}};
+          \node [continue chain=going left, on chain] {\pgfornament[width=5mm,symmetry=h]{28}};}
+        \node (sworn) [on chain] {\pgfornament[width=10mm,symmetry=h]{27}};
+
+        \node [continue chain, on chain, rotate=-90, shift={(-4mm,4.5mm)}] {\pgfornament[width=5mm,symmetry=h]{28}};
+        \foreach \i in {1,...,45}
+          \node [continue chain, on chain, rotate=-90, shift={(2mm,-2mm)}] {\pgfornament[width=5mm,symmetry=h]{28}};
+    \end{tikzpicture}
+  \end{english}
+}
 
 \begin{document}
 
-\begin{tikzpicture}[remember picture, overlay, start chain, node distance=-2mm,color=olive]
-    \node (nworn) [shift={(10mm,-10mm)}, anchor=north west, on chain ] at (current page.north west){\pgfornament[width=10mm]{27}};
-    \foreach \i in {1,...,15}
-      {\node [on chain] {\pgfornament[width=5mm]{28}};
-      \node [on chain] {\pgfornament[width=5mm]{28}};
-      }
+% \includepdf[pages={1}]{ratib-alhaddad-title.pdf}
+\includegraphics[scale=0.5,page=1]{ratib-alhaddad-title.pdf}
 
-    \node (neorn) [on chain] {\pgfornament[width=10mm,symmetry=v]{27}};
-    \node [continue chain, on chain, rotate=-90, shift={(4mm,-4.5mm)}] {\pgfornament[width=5mm]{28}};
-    \foreach \i in {1,...,45}
-      \node [continue chain, on chain, rotate=-90, shift={(-2mm,2mm)}] {\pgfornament[width=5mm]{28}};
+\basmalah\\
 
-    \node (seorn) [on chain, shift={(-4mm,-4mm)}] {\pgfornament[width=10mm,symmetry=c]{27}};
-    \foreach \i in {1,...,15}
-      {\node [continue chain=going left, on chain] {\pgfornament[width=5mm,symmetry=h]{28}};
-      \node [continue chain=going left, on chain] {\pgfornament[width=5mm,symmetry=h]{28}};}
-    \node (sworn) [on chain] {\pgfornament[width=10mm,symmetry=h]{27}};
+\thayyibah\\
 
-    \node [continue chain, on chain, rotate=-90, shift={(-4mm,4.5mm)}] {\pgfornament[width=5mm,symmetry=h]{28}};
-    \foreach \i in {1,...,45}
-      \node [continue chain, on chain, rotate=-90, shift={(2mm,-2mm)}] {\pgfornament[width=5mm,symmetry=h]{28}};
-\end{tikzpicture}
+\shalawat\\
 
-\begin{Arabic}
-  بسم الله الرحمن الرحيم
-\end{Arabic}
+\arabicfont
+  بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ اَلْحَمْدُ للهِ رَبِّ الْعَالَمِيْنَ. اَلرَّحْمنِ الرَّحِيْمِ. ماَلِكِ يَوْمِ الدِّيْنِ إِيِّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ. اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ. صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلاَ الضَّآلِّيْنَ. آمِيْنِ
+  اَللهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَهُ مَا فِي السَّموَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيْطُوْنَ بِشَيْءٍ مِنْ عِلْمِهِ إِلاَّ بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ  وَلاَ يَؤُدُهُ حِفْظُهُمَا وَهُوَ العَلِيُّ العَظِيْم
 
-\thispagestyle{empty}
+  بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ اَلْحَمْدُ للهِ رَبِّ الْعَالَمِيْنَ. اَلرَّحْمنِ الرَّحِيْمِ. ماَلِكِ يَوْمِ الدِّيْنِ إِيِّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ. اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ. صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلاَ الضَّآلِّيْنَ. آمِيْنِ
+  اَللهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَهُ مَا فِي السَّموَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيْطُوْنَ بِشَيْءٍ مِنْ عِلْمِهِ إِلاَّ بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ  وَلاَ يَؤُدُهُ حِفْظُهُمَا وَهُوَ العَلِيُّ العَظِيْم
+
+  بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ اَلْحَمْدُ للهِ رَبِّ الْعَالَمِيْنَ. اَلرَّحْمنِ الرَّحِيْمِ. ماَلِكِ يَوْمِ الدِّيْنِ إِيِّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ. اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ. صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلاَ الضَّآلِّيْنَ. آمِيْنِ
+  اَللهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَهُ مَا فِي السَّموَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيْطُوْنَ بِشَيْءٍ مِنْ عِلْمِهِ إِلاَّ بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ  وَلاَ يَؤُدُهُ حِفْظُهُمَا وَهُوَ العَلِيُّ العَظِيْم
+
+  بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ اَلْحَمْدُ للهِ رَبِّ الْعَالَمِيْنَ. اَلرَّحْمنِ الرَّحِيْمِ. ماَلِكِ يَوْمِ الدِّيْنِ إِيِّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ. اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ. صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلاَ الضَّآلِّيْنَ. آمِيْنِ
+  اَللهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَهُ مَا فِي السَّموَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيْطُوْنَ بِشَيْءٍ مِنْ عِلْمِهِ إِلاَّ بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ  وَلاَ يَؤُدُهُ حِفْظُهُمَا وَهُوَ العَلِيُّ العَظِيْم
+
+  بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ اَلْحَمْدُ للهِ رَبِّ الْعَالَمِيْنَ. اَلرَّحْمنِ الرَّحِيْمِ. ماَلِكِ يَوْمِ الدِّيْنِ إِيِّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ. اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ. صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلاَ الضَّآلِّيْنَ. آمِيْنِ
+  اَللهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَهُ مَا فِي السَّموَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيْطُوْنَ بِشَيْءٍ مِنْ عِلْمِهِ إِلاَّ بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ  وَلاَ يَؤُدُهُ حِفْظُهُمَا وَهُوَ العَلِيُّ العَظِيْم
+
+  بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ اَلْحَمْدُ للهِ رَبِّ الْعَالَمِيْنَ. اَلرَّحْمنِ الرَّحِيْمِ. ماَلِكِ يَوْمِ الدِّيْنِ إِيِّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ. اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ. صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلاَ الضَّآلِّيْنَ. آمِيْنِ
+  اَللهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَهُ مَا فِي السَّموَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيْطُوْنَ بِشَيْءٍ مِنْ عِلْمِهِ إِلاَّ بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ  وَلاَ يَؤُدُهُ حِفْظُهُمَا وَهُوَ العَلِيُّ العَظِيْم
+
+  بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ اَلْحَمْدُ للهِ رَبِّ الْعَالَمِيْنَ. اَلرَّحْمنِ الرَّحِيْمِ. ماَلِكِ يَوْمِ الدِّيْنِ إِيِّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ. اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ. صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلاَ الضَّآلِّيْنَ. آمِيْنِ
+  اَللهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَهُ مَا فِي السَّموَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيْطُوْنَ بِشَيْءٍ مِنْ عِلْمِهِ إِلاَّ بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ  وَلاَ يَؤُدُهُ حِفْظُهُمَا وَهُوَ العَلِيُّ العَظِيْم
+
+  بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ اَلْحَمْدُ للهِ رَبِّ الْعَالَمِيْنَ. اَلرَّحْمنِ الرَّحِيْمِ. ماَلِكِ يَوْمِ الدِّيْنِ إِيِّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ. اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ. صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلاَ الضَّآلِّيْنَ. آمِيْنِ
+  اَللهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَهُ مَا فِي السَّموَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيْطُوْنَ بِشَيْءٍ مِنْ عِلْمِهِ إِلاَّ بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ  وَلاَ يَؤُدُهُ حِفْظُهُمَا وَهُوَ العَلِيُّ العَظِيْم
+% \thispagestyle{empty}
 \clearpage
 
 \end{document}
