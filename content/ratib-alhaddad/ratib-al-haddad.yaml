@@ -1,9 +1,36 @@
 document:
   title: الرَاتِبُ الشَهِير
-  author: اﻹمام القطب الحبيب عبد الله بن علوي الحداد
+  author: 
+    - الإمام القطب الإرشاد الغوث العباد والبااد 
+    - الحبيب عبد الله بن محمد بن علوي الحداد
   version: "0.1"
   license: "GPL 2.0"
-external_src:
-  title: ratib-alhaddad.pdf
-  frame: frame-01.pdf
-  typesetter: typesetter-aprksy.yaml
+path:
+  reusable: ../reusable 
+  local: .
+  asset: asset
+data:
+- content: typesetter-aprksy.yaml
+- type: typesetter
+decoration:
+- content: frame-01.tex
+  type: frame
+content:
+# bold title
+- content: ratib-alhaddad.pdf
+  location: asset
+# the content author
+# hadiyah to Rasulullah, his Relatives and the author of the content
+- content: hadiyah-01-rasul.yaml
+  location: local
+# hadiyah to the 9 aulia Allah
+- content: hadiyah-02-aulia-9.yaml
+  location: local
+# hadiyah to masyayikh and asatidz in ma'had tebu-ireng
+- content: hadiyah-03-tebuireng.yaml
+  location: local
+
+# content starts
+# Al Fatihah
+- content: qs-001.yaml
+  location: reusable
