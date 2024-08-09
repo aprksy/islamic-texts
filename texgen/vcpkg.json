@@ -1,6 +1,7 @@
 {
   "dependencies": [
-    "yaml-cpp",
-    "inja"
+    "fmt",
+    "inja",
+    "yaml-cpp"
   ]
 }

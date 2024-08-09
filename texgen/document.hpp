@@ -17,20 +17,9 @@ namespace defaultValues
     const std::string assetsDir = localDir + "/assets";
 }
 
-struct DocData
+// start namespace DOC
+namespace DOC
 {
-    std::string title;
-    std::vector<std::string> authors;
-    std::string version;
-    std::string license;
-};
-
-struct Typesetter
-{
-    std::string name;
-    std::string email;
-    std::map<std::string, std::string> urls;
-};
 
 enum DecorationKind {
     Frame,
@@ -45,16 +34,78 @@ enum ResourceType {
     Vector
 };
 
-struct Content
+class Info;
+class Typesetter;
+class Content;
+class Decoration;
+
+class Visitor
 {
-    std::string sourceFile;
-    ResourceType type;
+public:
+    virtual void visit(Info& info) = 0;
+    virtual void visit(Typesetter& typesetter) = 0;
+    virtual void visit(Content& content) = 0;
+    virtual void visit(Decoration& decoration) = 0;
 };
 
-struct Decoration
+class Element
+{
+public:
+    virtual void accept(Visitor* visitor) = 0;
+};
+
+class Info: public Element
+{
+public:
+    std::string title;
+    std::vector<std::string> authors;
+    std::string version;
+    std::string license;
+
+    Info(std::string _title,
+         std::vector<std::string> _authors,
+         std::string _version,
+         std::string _license): 
+            title(_title),
+            authors(_authors),
+            version(_version),
+            license(_license) {};
+    void accept(Visitor* visitor) override { visitor->visit(*this); };
+};
+
+class Typesetter: public Element
+{
+public:
+    std::string name;
+    std::string email;
+    std::map<std::string, std::string> urls;
+
+    Typesetter(std::string _name,
+               std::string _email,
+               std::map<std::string, std::string> _urls): 
+                    name(_name),
+                    email(_email),
+                    urls(_urls) {};
+    void accept(Visitor* visitor) override { visitor->visit(*this); };
+};
+
+class Content: public Element
+{
+public:
+    std::string sourceFile;
+    ResourceType type;
+
+    Content(std::string _sourceFile, 
+            ResourceType _type): sourceFile(_sourceFile), type(_type) {};
+    void accept(Visitor* visitor) override { visitor->visit(*this); };
+};
+
+class Decoration: public Element
 {
     Content content;
     DecorationKind kind; 
+
+    void accept(Visitor* visitor) override { visitor->visit(*this); };
 };
 
 class Document
@@ -65,13 +116,12 @@ private:
                 mReusablePath,
                 mAssetPath;
 protected:
-    std::unique_ptr<DocData> docData;
-    std::unique_ptr<Typesetter> typeSetter;
+    std::shared_ptr<Info> info;
+    std::shared_ptr<Typesetter> typesetter;
 
-    void ParseDocSection(YAML::Node doc);
+    void parseInfoSection(YAML::Node doc);
+    void parseTypesetterSection(YAML::Node doc);
 public:
-    void Parse();
-    void Parse(std::string fileName);
     Document(): Document(defaultValues::fileName) {};
     Document(std::string fileName): Document(fileName, 
                                              defaultValues::localDir, 
@@ -87,7 +137,23 @@ public:
                          mAssetPath(assetPath) {};
     ~Document() {};
 
-    DocData* getDocData() const { return docData.get(); };
+    Info* getInfo() const { return info.get(); };
+    Typesetter* getTypesetter() const { return typesetter.get(); }
+
+    void parse();
+    void parse(std::string fileName);
+    void print(Visitor& printer);
 };
+
+class ConsolePrinter: public Visitor
+{
+    void visit(Info& info) override;
+    void visit(Typesetter& typesetter) override;
+    void visit(Content& content) override;
+    void visit(Decoration& decoration) override;
+};
+
+}
+// end namespace DOC
 
 #endif

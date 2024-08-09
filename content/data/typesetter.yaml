@@ -1,3 +1,6 @@
 typesetter: &typesetter_val
   name: Agung Prakasya
   email: aprksy@gmail.com
+  urls:
+    blog: https://blog.aprksy.xyz
+    git: https://github.com/aprksy

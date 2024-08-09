@@ -11,7 +11,7 @@ path:
   asset: asset
 data:
 - content: typesetter-aprksy.yaml
-- type: typesetter
+  type: typesetter
 decoration:
 - content: frame-01.tex
   type: frame
